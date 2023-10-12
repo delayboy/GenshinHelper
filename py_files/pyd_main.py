@@ -42,6 +42,8 @@ def hidden_imports():
     import PyTools.MyAwesomeTool.PyUseCPlus
     import PyTools.MyAwesomeTool.MyProcessHelper
     import PyTools.MyAwesomeTool.MyLinkHelper
+    import WebDriver
+    from selenium import webdriver
 
 
 if __name__ == '__main__':

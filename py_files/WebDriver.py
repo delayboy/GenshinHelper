@@ -7,10 +7,11 @@ import base64
 import numpy as np
 import cv2
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 from PyTools.MyAwesomeTool.MyUtil import start_thread, auto_patch_python, build_logger
 
 from PyTools.MyAwesomeTool.PyUseCPlus import MainUI, MyOpenCv, WinManager, MyDllLib
-from selenium.webdriver.common.action_chains import ActionChains
+
 
 logger = build_logger(filename="C:/share/log.txt", name=__name__, use_to_debug=True, file_log_debug=False)
 
@@ -95,7 +96,7 @@ class MyWebDriver:
 
     def go_url(self):
         self.driver.get(
-            "https://cg.163.com/#/mobile")  # https://favor.delayboy.cn/api/cacheFile?filename=fireWorks.html
+            "https://cg.163.com/#/mobile")  
         time.sleep(2)
         logger.debug("go url")
 

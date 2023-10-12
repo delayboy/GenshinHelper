@@ -1,5 +1,5 @@
 from __future__ import annotations  # 使用高级注解器，
-from PartnerHelper import MainUI, main_loop
+from PartnerHelper import main
 
 
 def hidden_imports():
@@ -45,4 +45,4 @@ def hidden_imports():
 
 
 if __name__ == '__main__':
-    MainUI(main_loop).myloop()
+    main()

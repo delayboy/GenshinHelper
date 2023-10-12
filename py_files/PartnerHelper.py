@@ -6,6 +6,7 @@ import numpy as np
 
 from PyTools.MyAwesomeTool.PyUseCPlus import WinManager, MainUI, MyDllLib, AndroidApp, start_thread, build_logger
 from PyTools.MyAwesomeTool.PyUseCPlus import MyOpenCv, Rect, auto_patch_python
+from WebDriver import main_loop as cloud_main_loop
 
 logger = build_logger(filename="log.log", name=__name__, use_to_debug=False, file_log_debug=True, use_time_rotate=False)
 
@@ -372,6 +373,7 @@ def main_loop(main_ui: MainUI):
     PartnerHelper(main_ui)
 
 
+USE_CLOUD = False
 Y_POS_0 = 0.24
 Y_DELTA = 0.085
 ANDROID_DEVICE_NAME = "QWBILZRGSW7XXCV4"
@@ -412,7 +414,12 @@ PARTNER_SETTING = """
 九条^10^false^
 芭芭拉^32^false^
 """
+def main():
+    auto_patch_python(globals(), patch_path="./settings.txt")
+    if USE_CLOUD:
+        MainUI(cloud_main_loop).myloop()
+    else:
+        MainUI(main_loop).myloop()
 
 if __name__ == '__main__':
-    auto_patch_python(globals(), patch_path="./settings.txt")
-    MainUI(main_loop).myloop()
+    main()

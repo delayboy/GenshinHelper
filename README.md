@@ -8,22 +8,6 @@
 
 
 
-## 重要提示
-
-使用**本工具一定要以无边框窗口模式运行原神！！！！！**。
-
-如何开启无边框窗口：
-
-- 在原神启动器文件夹下找到Genshin Impact Game文件夹
-
-- 打开Genshin Impact Game文件夹后，找到YuanShen.exe右击【在桌面创建快捷方式】。
-- 回到桌面右击之前创建的快捷方式，打开快捷方式属性面板
-- 在快捷方式【目标】属性中追加 `-popupwindow`参数，即可以无边框窗口方式启动原神。
-
-```shell
-"启动器安装目录\Genshin Impact Game\YuanShen.exe" -popupwindow
-```
-
 
 
 ## 软件特性
@@ -237,6 +221,22 @@ def script_entry_point(self):
             self.manager.set_top(not self.main_app.Pause)
             self.main_app.set_top(self.main_app.Pause)
         return False
+```
+
+
+
+## 如何开启原神无边框窗口模式获取更流畅的窗口切换体验
+
+如何开启无边框窗口：
+
+- 在原神启动器文件夹下找到Genshin Impact Game文件夹
+
+- 打开Genshin Impact Game文件夹后，找到YuanShen.exe右击【在桌面创建快捷方式】。
+- 回到桌面右击之前创建的快捷方式，打开快捷方式属性面板
+- 在快捷方式【目标】属性中追加 `-popupwindow`参数，即可以无边框窗口方式启动原神。
+
+```shell
+"启动器安装目录\Genshin Impact Game\YuanShen.exe" -popupwindow
 ```
 
 

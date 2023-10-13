@@ -14,7 +14,11 @@
 
 如何开启无边框窗口：
 
-在原神启动器文件夹下找到Genshin Impact Game文件夹，打开后找到YuanShen.exe在桌面创建快捷方式，右击快捷方式，在快捷方式目标属性中追加 `-popupwindow`参数，即可以无边框窗口方式启动原神。
+- 在原神启动器文件夹下找到Genshin Impact Game文件夹
+
+- 打开Genshin Impact Game文件夹后，找到YuanShen.exe右击【在桌面创建快捷方式】。
+- 回到桌面右击之前创建的快捷方式，打开快捷方式属性面板
+- 在快捷方式【目标】属性中追加 `-popupwindow`参数，即可以无边框窗口方式启动原神。
 
 ```shell
 "启动器安装目录\Genshin Impact Game\YuanShen.exe" -popupwindow

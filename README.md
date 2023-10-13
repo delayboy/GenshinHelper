@@ -22,6 +22,12 @@
 
 
 
+## DLL提示无法定位程序输入点CreateDX...
+
+说明电脑法使用最新的DX11截图技术，解决办法是将文件夹里的`MyDll-Without-DX11.dll` 重命名为 `MyDll.dll`替换现有的 `MyDll.dll`文件即可正常运行
+
+
+
 
 ## OpenCV模板图设置
 
@@ -31,7 +37,7 @@
 
 ## 配置文件
 
-- settings.txt
+- settings.py
 
 ```python
 # 是否以云挂机模式启动程序（将启动云挂机而非冷却计时助手）

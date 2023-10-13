@@ -2,7 +2,7 @@
 # 目录
 
 - [GenshinHelper](#genshinhelper)
-    - [软件特性](#软件特性)
+    - [软件特性（无需安装python环境即可启动）](#软件特性（无需安装python环境即可启动）)
     - [DLL提示无法定位程序输入点CreateDX...](#dll提示无法定位程序输入点createdx)
     - [OpenCV模板图设置](#opencv模板图设置)
     - [配置文件](#配置文件)

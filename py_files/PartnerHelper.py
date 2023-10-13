@@ -37,7 +37,7 @@ class PartnerHelper:
     def __init__(self, main_app: MainUI):
         self.main_app = main_app
         self.mainManager = WinManager(self.main_app.my_dll, "")
-        self.genShenManager = WinManager(self.main_app.my_dll, "原神")
+        self.genShenManager = WinManager(self.main_app.my_dll, "原神", class_name="UnityWndClass")
         self.android_app = AndroidApp(True, ANDROID_DEVICE_NAME)
         self.main_app.set_user_key_code_callback(self.user_key_code)
         self.main_app.set_user_key_code_realtime_callback(self.user_realtime_key_code)

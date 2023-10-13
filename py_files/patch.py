@@ -32,7 +32,7 @@ class ManyScriptArranger:
     def _match_sub_pos_and_do(self, temp_path: str, src_mat: np.ndarray, percent_rect: Rect, threshold: float = 0.85,
                               sleep_time: int = 1,
                               is_final: bool = True,
-                              reward: int = 0,
+                              reward: int = -1,
                               call_back: Callable[[np.ndarray, Tuple[float, float], str], None] = None,
                               action_alias_name: str = None) -> bool:
         if call_back is None:
@@ -43,7 +43,8 @@ class ManyScriptArranger:
         temp = MyOpenCv.cv_imread(self.temp_file_path + temp_path, cv2.IMREAD_UNCHANGED)
         src_sub_mat, rect = MyOpenCv.cut_picture_with_percent(src_mat, percent_rect)
         score, loc = MyOpenCv.match_single_score_and_pos(src_sub_mat, temp)
-        loc = (loc[0] + rect.left, loc[1] + rect.top)
+        loc = (loc[0] + int(rect.left), loc[1] + int(rect.top))
+        logger.debug(rect.__str__())
         img = MyOpenCv.draw_rect(src_mat, rect)
         img = MyOpenCv.show_single_match_pic(img, temp, score, loc)
         now = datetime.datetime.now()
@@ -68,7 +69,7 @@ class ManyScriptArranger:
 
     def _match_pos_and_do(self, temp_path: str, src_mat: np.ndarray, threshold: float = 0.85, sleep_time: int = 1,
                           is_final: bool = True,
-                          reward: int = 0,
+                          reward: int = -1,
                           call_back: Callable[[np.ndarray, Tuple[float, float], str], None] = None,
                           action_alias_name: str = None) -> bool:
 
@@ -159,6 +160,8 @@ class ManyScriptArranger:
                 exit(-1)
 
         img = self.capture_screen()
+        self._match_sub_pos_and_do("close.png", img, Rect(0.8, 0, 1, 1), 0.9)
+
         if self._match_pos_and_do("原神.png", img, 0.8, 5, False, 0, action_alias_name="什么都不干"):
             if self.taskTotalReward < 65530:
                 self.taskTotalReward += 1
@@ -272,7 +275,7 @@ class ManyScriptArranger:
         self._match_pos_and_do("各种绿色按钮.png", img, 0.92)
         self._match_pos_and_do("各种绿色按钮2.png", img, 0.92)
         self._match_sub_pos_and_do("close.png", img, Rect(0.8, 0, 1, 1), 0.9)
-        self._match_sub_pos_and_do("派蒙.png", img, Rect(0.02, 0.18, 0.10, 0.32),action_alias_name="砍树")
+        self._match_sub_pos_and_do("派蒙.png", img, Rect(0.02, 0.18, 0.10, 0.32), action_alias_name="砍树")
 
         self._match_pos_and_do("原神.png", img, 0.8, action_alias_name="原神启动")
         self._match_sub_pos_and_do("原神开始界面的退出按钮.png", img, Rect(0.90, 0.78, 0.96, 0.86))

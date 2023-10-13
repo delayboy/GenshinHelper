@@ -414,12 +414,15 @@ PARTNER_SETTING = """
 九条^10^false^
 芭芭拉^32^false^
 """
+
+
 def main():
-    auto_patch_python(globals(), patch_path="./settings.txt")
+    auto_patch_python(globals(), patch_path="./settings.py")
     if USE_CLOUD:
         MainUI(cloud_main_loop).myloop()
     else:
         MainUI(main_loop).myloop()
+
 
 if __name__ == '__main__':
     main()

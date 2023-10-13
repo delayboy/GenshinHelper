@@ -56,16 +56,21 @@ def delete_all_in_dir(dir_path: str):
         os.removedirs(dir_path)
 
 
+exclude_files = ["setup.py", "settings.py", "pyd_main.py", "PartnerHelper.py", "WebDriver.py", "patch.py"]
+
+
 def get_all_file(path):
     build_dir = os.path.join(path, "build")
+    delete_all_in_dir(build_dir)
+    build_dir = os.path.join(path, "__pycache__")
     delete_all_in_dir(build_dir)
 
     for root, dirs, files in os.walk(path):
         for name in files:
             file_path = os.path.join(root, name)
-            if name.endswith(".py") and (not name.__eq__("setup.py")) and (not name.__eq__("pyd_main.py")):
+            if name.endswith(".py") and (not name in exclude_files):
                 func(file_path)
-            elif name.endswith(".spec") or name.endswith(".txt") or name.endswith(".log"):
+            elif name.endswith(".spec") or name.endswith(".log"):
                 os.remove(file_path)
 
 

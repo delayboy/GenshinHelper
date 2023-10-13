@@ -1,6 +1,7 @@
 from __future__ import annotations  # 使用高级注解器，
 
-from typing import TypeVar
+from typing import TypeVar, Callable, Dict, Tuple, List
+import datetime
 import os
 import time
 import base64
@@ -10,10 +11,10 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from PyTools.MyAwesomeTool.MyUtil import start_thread, auto_patch_python, build_logger
 
-from PyTools.MyAwesomeTool.PyUseCPlus import MainUI, MyOpenCv, WinManager, MyDllLib
+from PyTools.MyAwesomeTool.PyUseCPlus import MainUI, MyOpenCv, WinManager, MyDllLib, Rect
 
-
-logger = build_logger(filename="C:/share/log.txt", name=__name__, use_to_debug=True, file_log_debug=False)
+logger = build_logger(filename="C:/share/log.txt", name=__name__, use_to_debug=True, file_log_debug=False,
+                      use_time_rotate=False)
 
 
 def base64_to_image(base64_string) -> np.ndarray:
@@ -96,7 +97,7 @@ class MyWebDriver:
 
     def go_url(self):
         self.driver.get(
-            "https://cg.163.com/#/mobile")  
+            "https://cg.163.com/#/mobile")
         time.sleep(2)
         logger.debug("go url")
 
@@ -164,10 +165,11 @@ class ScriptToolBox:
     def script_loop(self):
         while True:
             if not self.main_app.Pause:
-                try:
-                    self.arranger.script_entry_point()
-                except Exception as ep:
-                    logger.error("脚本发生致命错误: %s", ep)
+                self.arranger.script_entry_point()
+                # try:
+                #
+                # except Exception as ep:
+                #     logger.error("脚本发生致命错误: %s", ep)
 
             elif self.cache_img is not None:
                 # rect = MyOpenCv.get_real_rect_by_percent_rect(self.cache_img, self.main_app.rect)

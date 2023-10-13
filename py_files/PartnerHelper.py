@@ -8,7 +8,7 @@ from PyTools.MyAwesomeTool.PyUseCPlus import WinManager, MainUI, MyDllLib, Andro
 from PyTools.MyAwesomeTool.PyUseCPlus import MyOpenCv, Rect, auto_patch_python
 from WebDriver import main_loop as cloud_main_loop
 
-logger = build_logger(filename="log.log", name=__name__, use_to_debug=False, file_log_debug=True, use_time_rotate=False)
+logger = build_logger(filename="log.log", name=__name__, use_to_debug=True, file_log_debug=True, use_time_rotate=False)
 
 
 class Property:
@@ -57,6 +57,7 @@ class PartnerHelper:
         start_thread(self.record_gui_screen_loop, ())
         start_thread(self.draw_loop, ())
         start_thread(self.skills_cd_loop, ())
+        start_thread(self.ocr_loop, ())
 
     def rotation_loop(self, loop_num=1, delay=0):
         if not self.keep_rotation:
@@ -86,8 +87,7 @@ class PartnerHelper:
                     self.skills_cd[i] -= 0.1
             time.sleep(0.1)
 
-    def draw_loop(self):
-        fresh_index = 0
+    def ocr_loop(self):
         while True:
             if self.auto_click:
                 self.isPartnerShipLocked = True
@@ -96,11 +96,40 @@ class PartnerHelper:
 
             now_index = self.select_now_index_match()
             self.now_index = now_index if now_index != -1 else self.now_index
-            fresh_index = 0
 
             if self.fill_cd_flag:
                 self.fill_cd_flag = False
                 self.fill_now_partner_cd()
+                time.sleep(1)
+                self.correct_skill_cd_with_ocr()
+
+            for i in range(4):
+                name = self.ship_names[i]
+                if not name.__contains__("那维"):
+                    continue
+
+                if self.pre_partner_index != self.now_index:
+                    if self.now_index == i:
+                        self.skills_cd[4] = 10
+                        logger.debug("那维-切换到前台")
+                    elif self.pre_partner_index == i:
+                        self.skills_cd[4] = 105 if self.on_buff else 5
+                        logger.debug("那维-切换到后台")
+
+                if self.skills_cd[4] <= 0:  # 如果计时归零时，在前台就取消buff，在后台就上buff
+                    self.on_buff = (self.now_index != i)
+                break
+
+            self.pre_partner_index = self.now_index
+            time.sleep(0.02)
+
+    def draw_loop(self):
+
+        while True:
+            if self.auto_click:
+                self.isPartnerShipLocked = True
+                time.sleep(0.5)
+                continue
 
             for i in range(4):
                 name = self.ship_names[i]
@@ -110,27 +139,16 @@ class PartnerHelper:
                 y_pos = Y_POS_0 + i * Y_DELTA
                 show_text = "%.1f%s%s" % (self.skills_cd[i], div_str, name)
                 self.mainManager.draw_text(Rect(0.88, y_pos, 1, y_pos + 0.06), show_text, text_color, bk_color)
-                self.buff_cd(name, i, text_color)
-
-            self.pre_partner_index = self.now_index
+                self.buff_cd(name, text_color)
 
             # fresh_index += 1
             time.sleep(0.002)
 
-    def buff_cd(self, name: str, index: int, text_color):
+    def buff_cd(self, name: str, text_color):
         if name.__contains__("那维"):
             bk_color = (0, 255, 0) if self.on_buff else (255, 0, 0)
             show_text = "%.1f%s%s" % (self.skills_cd[4], ":", name)
-            if self.pre_partner_index != self.now_index:
-                if self.now_index == index:
-                    self.skills_cd[4] = 10
-                    logger.debug("那维-切换到前台")
-                elif self.pre_partner_index == index:
-                    self.skills_cd[4] = 105 if self.on_buff else 5
-                    logger.debug("那维-切换到后台")
 
-            if self.skills_cd[4] <= 0:  # 如果计时归零时，在前台就取消buff，在后台就上buff
-                self.on_buff = (self.now_index != index)
             self.mainManager.draw_text(Rect(0, 0, 0.12, 0.06), show_text, text_color, bk_color)
 
     def record_gui_screen_loop(self):
@@ -174,7 +192,6 @@ class PartnerHelper:
         elif key_code == 69:  # E
             time.sleep(0.2)
             self.fill_cd_flag = True
-            self.correct_skill_cd_with_ocr()
 
         elif key_code == 48:  # 0
             self.clear_sills_cd()
@@ -255,6 +272,7 @@ class PartnerHelper:
 
         rect = self.genShenManager.from_percent_rect_get_real_rect(Rect(0.80260, 0.8815, 0.908, 0.974))
         src_mat = self.genShenManager.capture_window(rect)
+        self.main_app.show_image(src_mat, "CD截图")
         temp_path = "templates/E.png"
         temp_mat = MyOpenCv.cv_imread(temp_path)
         score, point = MyOpenCv.match_single_score_and_pos(src_mat, temp_mat)
@@ -265,8 +283,9 @@ class PartnerHelper:
             num_mat = MyOpenCv.cut_picture(src_mat, roi_rect)
             num_mat = MyOpenCv.color_to_gray(num_mat)
             num_mat = MyOpenCv.threshold(num_mat, 245, 255)
+
             v = self.number_ocr(num_mat.copy())
-            self.main_app.show_image(num_mat, "推断:%.2f" % v)
+            # self.main_app.show_image(num_mat, "推断:%.2f" % v)
             return v
 
         else:
@@ -363,7 +382,7 @@ class PartnerHelper:
             # logger.debug(log_str)
             if top < loc[1] < bottom:
                 # logger.debug("当前选中的角色为:%s %.2f", self.ship_names[i], score)
-                self.main_app.show_image(src_mat, "当前选中的角色为:%s" % self.ship_names[i])
+                # self.main_app.show_image(src_mat, "当前选中的角色为:%s" % self.ship_names[i])
                 return i
 
         return -1

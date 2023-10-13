@@ -1,0 +1,91 @@
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 胡桃 16.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 宵宫 18.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 雷神 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 草神 6.00 1
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 夜兰 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 神里 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 甘雨 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 魈 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 钟离 12.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 辛炎 18.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 迪奥娜 15.00 1
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 温迪 6.00 1
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 七七 30.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 刻晴 7.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 莫娜 12.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 迪卢克 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 琴 6.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 砂糖 15.00 1
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 重云 15.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 女仆 24.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 心海 20.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 班尼特 5.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 皇女 25.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 那维 12.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 凝光 12.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 行秋 21.00 1
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 北斗 8.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 罗莎 6.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 万叶 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 香菱 12.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 雷泽 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 早柚 11.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 九条 10.00 0
+[2023-10-13 21:56:43 PartnerHelper  P-14856 T-15920 DEBUG    get_partner_properties] 芭芭拉 32.00 0
+[2023-10-13 21:56:46 PartnerHelper  P-14856 T-10392 DEBUG    auto_exchange_partner_ship_with_ocr] Wrong bmp Size!
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/胡桃.png) score:(0.3753)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/雷神.png) score:(0.1588)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/草神.png) score:(0.3555)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/夜兰.png) score:(0.5002)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/神里.png) score:(0.1613)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/甘雨.png) score:(0.4172)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/钟离.png) score:(0.5335)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/迪奥娜.png) score:(0.2562)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/温迪.png) score:(0.4062)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/刻晴.png) score:(0.3129)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/莫娜.png) score:(0.3977)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/琴.png) score:(0.3882)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/砂糖.png) score:(0.3556)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/心海.png) score:(0.3076)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/班尼特.png) score:(0.4152)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/皇女.png) score:(0.3451)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/那维.png) score:(0.2706)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/行秋.png) score:(0.5049)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/罗莎.png) score:(0.3670)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:0)(path:templates/partner/万叶.png) score:(0.8759)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/胡桃.png) score:(0.3831)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/雷神.png) score:(0.2272)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/草神.png) score:(0.2330)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/夜兰.png) score:(0.4362)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/神里.png) score:(0.3394)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/甘雨.png) score:(0.4343)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/钟离.png) score:(0.3993)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/迪奥娜.png) score:(0.3166)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/温迪.png) score:(0.3296)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/刻晴.png) score:(0.3977)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/莫娜.png) score:(0.3324)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/琴.png) score:(0.4653)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/砂糖.png) score:(0.2409)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/心海.png) score:(0.2153)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/班尼特.png) score:(0.6098)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/皇女.png) score:(0.3821)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:1)(path:templates/partner/那维.png) score:(0.9669)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/胡桃.png) score:(0.1534)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/雷神.png) score:(-0.4786)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/草神.png) score:(-0.1849)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/夜兰.png) score:(0.3792)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/神里.png) score:(-0.6001)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/甘雨.png) score:(0.4836)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:2)(path:templates/partner/钟离.png) score:(1.0000)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:3)(path:templates/partner/胡桃.png) score:(0.3432)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:3)(path:templates/partner/雷神.png) score:(0.2575)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:3)(path:templates/partner/草神.png) score:(0.3681)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:3)(path:templates/partner/夜兰.png) score:(0.5105)
+[2023-10-13 21:56:47 PartnerHelper  P-14856 T-10392 DEBUG    list_member_match] (row:3)(path:templates/partner/神里.png) score:(0.9130)
+[2023-10-13 21:56:49 PartnerHelper  P-14856 T-5288 DEBUG    ocr_loop] 那维-切换到前台
+[2023-10-13 21:56:50 PartnerHelper  P-14856 T-5288 DEBUG    ocr_loop] 那维-切换到后台
+[2023-10-13 21:56:51 PartnerHelper  P-14856 T-5288 DEBUG    fill_now_partner_cd] 记录角色[万叶]的CD
+[2023-10-13 21:56:52 PartnerHelper  P-14856 T-5288 DEBUG    correct_skill_cd_with_ocr] number_ocr_cd:5.00
+[2023-10-13 21:56:53 PartnerHelper  P-14856 T-10392 DEBUG    correct_skill_cd_with_ocr] number_ocr_cd:3.70
+[2023-10-13 21:56:54 PartnerHelper  P-14856 T-5288 DEBUG    fill_now_partner_cd] 记录角色[神里]的CD
+[2023-10-13 21:56:55 PartnerHelper  P-14856 T-5288 DEBUG    correct_skill_cd_with_ocr] number_ocr_cd:8.80

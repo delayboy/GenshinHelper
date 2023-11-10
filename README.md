@@ -1,3 +1,6 @@
+# 视频教程
+
+- 链接：https://www.bilibili.com/video/BV1Lw41167v8
 
 # 目录
 
@@ -16,8 +19,6 @@
     - [Requirements](#requirements)
 
 # GenshinHelper
-
-视频教程：https://www.bilibili.com/video/BV1Lw41167v8
 
 使用冷却计时插件：**一定要以管理员身份运行！！！一定要以管理员身份运行！！！一定要以管理员身份运行！！！**
 
